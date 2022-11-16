@@ -1,0 +1,345 @@
+{% extends 'ssebowa/base.html' %}
+{% block content %}
+<div class="op-header" style="margin-top:10em">
+    <div class="section-header text-center">
+        <h2 class="f2 c3">about us</h2>
+        <h1 class="f1 fw-7 cw">Get to know us</h1>
+    </div>
+</div>
+<!-- op-header end -->
+<!-- page-content start -->
+<div class="page-content">
+    <div class="about-page">
+        <div class="intro1 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 mb-sm-50">
+                        <div class="item">
+                            <div class="item-thumb">
+                                <a href="#">
+
+                                    <img src="{{ url_for('static', filename='themes/ssebowa/img/intro/support.jpg') }}"
+                                        alt="intro thumb">
+                                </a>
+                            </div>
+                            <div class="item-txt text-center f1">
+                                <h2 class="fw-6">Become Climate Active</h2>
+                                <p class="fw-4">Everytime you search with Ssebowa, you plant a needed tree in a needed
+                                    place.</p>
+                                <a href="#" class="rdm"> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-sm-50">
+                        <div class="item">
+                            <div class="item-thumb">
+                                <a href="#">
+                                    <img src="{{ url_for('static', filename='themes/ssebowa/img/intro/img_6.jpg') }}"
+                                        alt="intro thumb">
+                                </a>
+                            </div>
+                            <div class="item-txt text-center f1">
+                                <h2 class="fw-6">Become Soil Active</h2>
+                                <p class="fw-4">Your searches contributes to bring back the deforested land back to
+                                    shade.</p>
+                                <a href="#" class="rdm"> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-xs-offset-0">
+                        <div class="item">
+                            <div class="item-thumb">
+                                <a href="#">
+                                    <img src="{{ url_for('static', filename='themes/ssebowa/img/intro/img_5.jpg') }}"
+                                        alt="intro thumb">
+                                </a>
+                            </div>
+                            <div class="item-txt text-center f1">
+                                <h2 class="fw-6">Become Animal Active</h2>
+                                <p class="fw-4">Animal protection is education to humanity. Let them test the sweetness
+                                    of technology.</p>
+                                <a href="#" class="rdm"> <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="process">
+            <div class="container">
+                <div class="row pos-r">
+                    <div class="col-lg-7 pr-0">
+                        <div class="process-txt">
+                            <div class="section-header">
+                                <h2 class="f2 c1">Way of Working</h2>
+                                <h1 class="f1 fw-7 c4">Learn about how Ssebowa works</h1>
+                            </div>
+                            <p class="txt-normal">Like any other search engine we get our revenue from advertising but
+                                we 100% respect your privancy.</p>
+                            <ul class="c4 f1 mt-55">
+                                <li class="fw-6 mb-35 clearfix"> <i class="nivio-checked"></i> <span>Protect and enhance
+                                        environment for future generations.</span>
+                                </li>
+                                <li class="fw-6 mb-35 clearfix"> <i class="nivio-checked"></i> <span>Fight global
+                                        hunger</span>
+                                </li>
+                                <li class="fw-6 mb-35 clearfix"> <i class="nivio-checked"></i> <span>Educate the girl
+                                        child</span>
+                                </li>
+                            </ul>
+                            <div class="process-img">
+                                <img src="{{ url_for('static', filename='themes/ssebowa/img/process/tree.jpg') }}"
+                                    alt="">
+                                <div class="customers bg3 c4 f1">
+                                    <h2 class="fw-4">8,000</h2>
+                                    <span class="fw-6">Planted Trees</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- facts start -->
+        <div class="facts-area text-center text-capitalize">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="fact-container mb-sm-50">
+                            <div class="single-fact"> <span class="nivio-recycle"></span>
+                                <h3 class="fact-title c3 f2 fw-3 text-capitalize">Meal Served</h3>
+                                <div class="numscroller fact-num cw f1" data-slno='15' data-min="0" data-max="1000"
+                                    data-delay='30' data-increment="5">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="fact-container mb-sm-50">
+                            <div class="single-fact"> <span class="nivio-handshake"></span>
+                                <h3 class="fact-title c3 f2 fw-3 text-capitalize">Trees Plant</h3>
+                                <div class="numscroller fact-num cw f1" data-slno='15' data-min="0" data-max="750"
+                                    data-delay='30' data-increment="5">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="fact-container mb-xs-50">
+                            <div class="single-fact"> <span class="nivio-growth"></span>
+                                <h3 class="fact-title c3 f2 fw-3 text-capitalize">Projects</h3>
+                                <div class="numscroller fact-num cw f1" data-slno='15' data-min="0" data-max="458"
+                                    data-delay='30' data-increment="5">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="fact-container">
+                            <div class="single-fact"> <span class="nivio-key"></span>
+                                <h3 class="fact-title c3 f2 fw-3 text-capitalize">Pads served</h3>
+                                <div class="numscroller fact-num cw f1" data-slno='35' data-min="0" data-max="670"
+                                    data-delay='30' data-increment="5">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- facts end -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center mb-30">
+                    <h2 class="f2 c1">our team</h2>
+                    <h1 class="f1 fw-7 c4">Meet our expert team</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mt-30">
+                        <div class="member pos-r">
+                            <img src="{{ url_for('static', filename='themes/ssebowa/img/team/disan.jpg') }}" alt="">
+                            <div class="member-info text-center f1">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h2 class="fw-7 c4">Disan Ssebowa Basalidde</h2>
+                                <p class="fw-4">Founder and CEO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-30">
+                        <div class="member pos-r">
+                            <img src="{{ url_for('static', filename='themes/ssebowa/img/team/sasanka.jpg') }}" alt="">
+                            <div class="member-info text-center f1">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h2 class="fw-7 c4">Kavindu Sasanka</h2>
+                                <p class="fw-4">COO and Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-30">
+                        <div class="member pos-r">
+                            <img src="{{ url_for('static', filename='themes/ssebowa/img/team/sujal.jpg') }}" alt="">
+                            <div class="member-info text-center f1">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h2 class="fw-7 c4">Sujal Bhakare</h2>
+                                <p class="fw-4">CTO and Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-30">
+                        <div class="member pos-r">
+                            <img src="{{ url_for('static', filename='themes/ssebowa/img/team/sanjida.jpg') }}" alt="">
+                            <div class="member-info text-center f1">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h2 class="fw-7 c4">Sanjida Jahan</h2>
+                                <p class="fw-4">CMO and Social Media Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-30">
+                        <div class="member pos-r">
+                            <img src="{{ url_for('static', filename='themes/ssebowa/img/team/violah.jpg') }}" alt="">
+                            <div class="member-info text-center f1">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h2 class="fw-7 c4">Violah Audray</h2>
+                                <p class="fw-4">Content and Digital Marketer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-30">
+                        <div class="member pos-r">
+                            <img src="{{ url_for('static', filename='themes/ssebowa/img/team/bilal.jpg') }}" alt="">
+                            <div class="member-info text-center f1">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="c4 fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h2 class="fw-7 c4">Bilal Rasheed</h2>
+                                <p class="fw-4">Graphics Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="testimony mt-md pt-md">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="f2 c1">testimonials</h2>
+                    <h1 class="f1 fw-7 c4">What our users says</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+                        <div class="testimonial owl-carousel">
+                            <div class="pw-item f1 text-center">
+                                <p>This is due to their excellent service, competitive pricing and customer
+                                    support.
+                                    It’s throughly refresing to get such a personal touch. Novio in my
+                                    opinion deserves
+                                    support for its projects.</p>
+                                <img src="{{ url_for('static', filename='themes/ssebowa/img/testimony/01.png') }}"
+                                    alt="">
+                                <p class="name fw-7 c1">john smith</p>
+                            </div>
+                            <div class="pw-item f1 text-center">
+                                <p>This is due to their excellent service, competitive pricing and customer
+                                    support.
+                                    It’s throughly refresing to get such a personal touch. Novio in my
+                                    opinion deserves
+                                    support for its projects.</p>
+                                <img src="{{ url_for('static', filename='themes/ssebowa/img/testimony/02.png') }}"
+                                    alt="">
+                                <p class="name fw-7 c1">allen stwart</p>
+                            </div>
+                            <div class="pw-item f1 text-center">
+                                <p>This is due to their excellent service, competitive pricing and customer
+                                    support.
+                                    It’s throughly refresing to get such a personal touch. Novio in my
+                                    opinion deserves
+                                    support for its projects.</p>
+                                <img src="{{ url_for('static', filename='themes/ssebowa/img/testimony/03.png') }}"
+                                    alt="">
+                                <p class="name fw-7 c1">maria dove</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

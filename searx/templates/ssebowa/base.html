@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset=utf-8>
+    {% if rtl %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='themes/simple/css/searxng-rtl.min.css') }}"
+        type="text/css" media="screen" />
+    {% else %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='themes/simple/css/searxng.min.css') }}" type="text/css"
+        media="screen" />
+    {% endif %}
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}{{ instance_name }}</title>
+    <meta name="description" content="">
+    {% block meta %}{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- ====== main style start ====== -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='themes/ssebowa/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='themes/ssebowa/css/effect.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='themes/ssebowa/css/responsive.css') }}">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <header class="header1">
+        <nav class="navbar nav-solid mb-0">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <span></span> <span></span> <span></span>
+                    </button>
+                    <a class="navbar-brand" href="/" style="display:flex;align-items:center;justify-content:center">
+                        <img src="{{ url_for('static', filename='themes/ssebowa/img/logo/logo.png') }}" alt="logo"
+                            style="width: 150px;height:auto">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <form class="navbar-left" id="search" method="{{ method or 'POST' }}"
+                        action="{{ url_for('search') }}" role="search" style="max-width:300px;width:100%;display:flex">
+                        <input type="text" class="form-control" id="q"
+                            style="color:#000;font-size:15px;min-width:100px; border:1px solid #ffffff;border-radius:5px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+                            name="q" placeholder="{{ _('Search for...') }}" autocomplete="off" autocapitalize="none"
+                            spellcheck="false" autocorrect="off" dir="auto" value="{{ q or '' }}">
+                        <button type="submit"
+                            style="display:flex;align-items:center;justify-content:center;border:1px solid #ffffff;margin-left:1em;width:3.5em;height:3em;border-radius:100em;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; ">
+                            <img style="width:1.5em;height:1.5em"
+                                src="{{ url_for('static', filename='themes/ssebowa/img/logo/search.svg') }}" /></button>
+                    </form>
+
+                    <ul class="nav navbar-nav f1 mainMenu text-capitalize">
+                        <li class="active"> <a href="/">Home</a>
+
+                        </li>
+                        <li><a href="info/en/about">about</a>
+                        </li>
+                        <li> <a href="/">projects</a>
+
+                        </li>
+                        <li><a href="gallery.html">gallery</a>
+                        </li>
+
+                        <li><a href="contact.html">contact</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav social-nav navbar-right">
+                        <li>
+                            <a href="https://twitter.com/ssebowaai"> <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/Ssebowa-101838482690765/"> <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/showcase/ssebowa"> <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 mb-xs-30">
+                        <a href="#">
+                            <img src="{{ url_for('static', filename='themes/ssebowa/img/logo/logo.png') }}" alt=""
+                                style="height: 110px; width: 200px">
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="list-inline text-right">
+                            <li><a href="https://twitter.com/ssebowaai"><i class="c4 fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/Ssebowa-101838482690765/"><i
+                                        class="c4 fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/showcase/ssebowa"><i
+                                        class="c4 fa fa-linkedin"></i></a>
+                            </li>
+                            <!-- <li><a href="#"><i class="c4 fa fa-youtube-play"></i></a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 clearfix mb-sm-50">
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">conmpany</h2>
+                            <ul>
+                                <li> <a href="#">about</a>
+                                </li>
+                                <li> <a href="index.html">missions</a>
+                                </li>
+                                <li> <a href="projects.html">our projects</a>
+                                </li>
+                                <li> <a href="contact.html">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">Other Products</h2>
+                            <ul>
+                                <li><a href="https://ssebowa.ai/data_science.html">Data Science</a>
+                                </li>
+                                <li><a href="https://ssebowa.ai/visualisation.html">Data Visualisation</a>
+                                </li>
+                                <!--<li><a href="#">Organic</a>
+                                    </li>
+                                    <li><a href="#">Biology</a>
+                                    </li>-->
+                            </ul>
+                        </div>
+                        <div class="fooler-col f1">
+                            <h2 class="footer-title">links</h2>
+                            <ul>
+                                <li><a href="#">Help</a>
+                                </li>
+                                <li><a href="#">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-sm-50">
+                        <div class="footer-contact">
+                            <h2 class="footer-title">Contact</h2>
+                            <h3>30 N Gould St, Sheridan,
+                                WY 82801, USA</h3>
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> supoort@ssebowa.ai</li>
+                                <li><i class="fa fa-phone-square"></i> +32474171274</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-contact f1">
+                            <h2 class="footer-title">newslater</h2>
+                            <form>
+                                <input type="email" placeholder="Email address">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom f1">
+            <div class="container">
+                <p>Copyright @2022 Ssebowa com</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- </div> -->
+    <!-- page-wrapper end -->
+    <div class="back2Top bg1"> <i class="fa fa-angle-up fa-2x cw"></i>
+    </div>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/jquery-1.12.4.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/html5lightbox/html5lightbox.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/owl.carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/numscroller-1.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/jquery.enllax.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/isotope.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/magnific-popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='themes/ssebowa/js/main.js') }}"></script>
+</body>
+
+</html>

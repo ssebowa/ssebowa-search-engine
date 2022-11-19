@@ -147,13 +147,18 @@
   {% endif %}
 
   <div id="urls" role="main">
+
+
     {% for result in results %}
     {% if result.open_group and not only_template %}<div
       class="template_group_{{ result['template']|replace('.html', '') }}">{% endif %}
       {% set index = loop.index %}
-      {% include get_result_template('simple', result['template']) %}
+      {% include get_result_template('ssebowa', result['template']) %}
       {% if result.close_group and not only_template %}</div>{% endif %}
     {% endfor %}
+
+
+
     {% if not results and not answers %}
     {% include 'simple/messages/no_results.html' %}
     {% endif %}
@@ -201,6 +206,19 @@
   </nav>
   {% endif %}
 </div>
+
+<script>
+  var template = results.className
+  console.log(template)
+  console.log(q.value)
+
+  if(template == 'only_template_map') {
+    console.log(q.value)
+    location.assign('https://www.google.com/maps?q={{q}}');
+  }
+
+
+</script>
 {% endblock %}
 
 <!-- </div> -->

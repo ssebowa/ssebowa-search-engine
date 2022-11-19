@@ -128,7 +128,7 @@ from searx.search.checker import get_result as checker_get_result
 logger = logger.getChild('webapp')
 
 # check secret_key
-if not searx_debug and settings['server']['secret_key'] == 'ultrasecretkey':
+if not searx_debug and settings['server']['secret_key'] == '':
     logger.error('server.secret_key is not changed. Please use something else instead of ultrasecretkey.')
     sys.exit(1)
 
@@ -818,7 +818,7 @@ def search():
         time_range = search_query.time_range,
         number_of_results = format_decimal(number_of_results),
         suggestions = suggestion_urls,
-        answers = result_container.answers,
+        answers = result_container.answers, 
         corrections = correction_urls,
         infoboxes = result_container.infoboxes,
         engine_data = result_container.engine_data,
